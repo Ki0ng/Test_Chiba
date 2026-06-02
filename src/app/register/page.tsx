@@ -57,7 +57,7 @@ export default function RegisterPage() {
         <div className="text-center">
           <div className="text-5xl mb-3">☕</div>
           <h1 className="text-3xl font-extrabold text-primary tracking-tight">Tạo tài khoản</h1>
-          <p className="text-muted-foreground mt-1.5 text-sm">Gia nhập ngôi nhà ZEN F&B</p>
+          <p className="text-muted-foreground mt-1.5 text-sm">Gia nhập ngôi nhà Chiba</p>
         </div>
 
         {/* Form Card */}

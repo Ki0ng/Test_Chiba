@@ -122,7 +122,7 @@ export default function ProfilePage() {
           {/* Zen points field */}
           <div className="p-5 flex items-center justify-between hover:bg-neutral-50/50 transition">
             <div className="space-y-1">
-              <p className="text-xs font-semibold text-muted-foreground/80 uppercase tracking-wider">Điểm ZEN</p>
+              <p className="text-xs font-semibold text-muted-foreground/80 uppercase tracking-wider">Điểm Chiba</p>
               <p className="font-bold text-accent text-sm">{user.zenPoints} điểm</p>
             </div>
             <Star className="w-5 h-5 text-accent/50" />
@@ -187,7 +187,7 @@ export default function ProfilePage() {
           <div className="bg-card w-full max-w-[280px] rounded-2xl border border-border shadow-modal text-center overflow-hidden animate-fade-in">
             {/* Modal Heading Details */}
             <div className="p-5 space-y-2">
-              <h3 className="text-lg font-bold text-foreground tracking-tight">ZEN xin chào!</h3>
+              <h3 className="text-lg font-bold text-foreground tracking-tight">Chiba xin chào!</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">Vui lòng nhập tên của bạn</p>
               <input
                 type="text"

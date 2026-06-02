@@ -29,9 +29,9 @@ const CURRENT_USER_KEY = 'zen_fb_current_user';
 const TOKEN_KEY = 'zen_fb_token';
 
 const DEFAULT_USERS: Record<string, any> = {
-  'user@zenfb.com': {
+  'user@chiba.com': {
     id: 'user_1',
-    email: 'user@zenfb.com',
+    email: 'user@chiba.com',
     password: '123456',
     fullName: 'Noname',
     phone: '0831111111',
@@ -41,9 +41,9 @@ const DEFAULT_USERS: Record<string, any> = {
     role: 'CUSTOMER',
     isSuspended: false,
   },
-  'staff@zenfb.com': {
+  'staff@chiba.com': {
     id: 'staff_1',
-    email: 'staff@zenfb.com',
+    email: 'staff@chiba.com',
     password: '123456',
     fullName: 'Trần Nhân Viên',
     phone: '0912345678',
@@ -53,9 +53,9 @@ const DEFAULT_USERS: Record<string, any> = {
     role: 'STAFF',
     isSuspended: false,
   },
-  'admin@zenfb.com': {
+  'admin@chiba.com': {
     id: 'admin_1',
-    email: 'admin@zenfb.com',
+    email: 'admin@chiba.com',
     password: '123456',
     fullName: 'Quản Trị Viên',
     phone: '0988446746',
@@ -178,7 +178,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       id: `user_${Date.now()}`,
       email: normalizedEmail,
       password,
-      fullName: fullName.trim() || (role === 'STAFF' ? 'Nhân Viên ZEN' : 'Khách Hàng ZEN'),
+      fullName: fullName.trim() || (role === 'STAFF' ? 'Nhân Viên Chiba' : 'Khách Hàng Chiba'),
       phone: '09' + Math.floor(10000000 + Math.random() * 90000000),
       customerCode: randomCode,
       zenPoints: role === 'STAFF' ? 10 : 0, // Staff starts with default 10 points

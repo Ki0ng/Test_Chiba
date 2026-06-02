@@ -31,8 +31,8 @@ export default function Header({ user }: HeaderProps) {
           <div className="flex items-center gap-2">
             <div className="text-2xl">☕</div>
             <div>
-              <h1 className="text-xl font-bold tracking-tight">ZEN F&B</h1>
-              <p className="text-[10px] text-white/70 tracking-widest uppercase">Trà & Cà Phê</p>
+              <h1 className="text-xl font-bold tracking-tight">Chiba</h1>
+              <p className="text-[10px] text-white/70 tracking-widest uppercase">Tea, Coffee & Foods</p>
             </div>
           </div>
 

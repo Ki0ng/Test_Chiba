@@ -43,13 +43,13 @@ export default function LoginPage() {
   // Helper function to auto-fill credentials for testing
   const handleQuickLogin = (role: 'CUSTOMER' | 'STAFF' | 'ADMIN') => {
     if (role === 'CUSTOMER') {
-      setEmail('user@zenfb.com');
+      setEmail('user@chiba.com');
       setPassword('123456');
     } else if (role === 'STAFF') {
-      setEmail('staff@zenfb.com');
+      setEmail('staff@chiba.com');
       setPassword('123456');
     } else {
-      setEmail('admin@zenfb.com');
+      setEmail('admin@chiba.com');
       setPassword('123456');
     }
   };
@@ -59,11 +59,11 @@ export default function LoginPage() {
   return (
     <div className="flex flex-col justify-center min-h-screen bg-gradient-to-br from-orange-50 to-orange-100/60 px-6 py-12">
       <div className="w-full max-w-sm mx-auto space-y-8 animate-fade-in">
-        {/* ZEN Brand Identity */}
+        {/* Chiba Brand Identity */}
         <div className="text-center">
           <div className="text-6xl mb-4 animate-bounce duration-1000">☕</div>
-          <h1 className="text-4xl font-extrabold text-primary tracking-tight">ZEN F&B</h1>
-          <p className="text-muted-foreground mt-2 text-sm font-medium tracking-wide">Trà • Cà Phê • Đồ Ăn</p>
+          <h1 className="text-4xl font-extrabold text-primary tracking-tight">Chiba</h1>
+          <p className="text-muted-foreground mt-2 text-sm font-medium tracking-wide">Tea • Coffee • Foods</p>
         </div>
 
         {/* Auth Form Card */}

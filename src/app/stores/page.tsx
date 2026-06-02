@@ -7,15 +7,15 @@ import { Store } from '@/types';
 import { ArrowLeft, MapPin, Search } from 'lucide-react';
 
 const MOCK_STORES: Store[] = [
-  { id: 's1', name: 'ZEN TEA Biên Hùng', address: 'Số 241 đường 30/4, p. Trung Dũng Biên Hoà - Đồng Nai', phone: '0251.3822.421', isActive: true },
-  { id: 's2', name: 'ZEN TEA Ngô Quyền', address: 'Số 328 đường 30/4, p. Trung Dũng Biên Hoà - Đồng Nai', phone: '0251.3822.422', isActive: true },
-  { id: 's3', name: 'ZEN TEA Quảng Trường', address: 'Số 384 đường Phạm Văn Thuận, p.Trung Dũng, Biên Hoà - Đồng Nai', phone: '0251.3822.423', isActive: true },
-  { id: 's4', name: 'ZEN TEA Hố Nai', address: 'Số 63 đường Nguyễn Ái Quốc, p.Tân Biên Biên Hoà - Đồng Nai', phone: '0251.3822.424', isActive: true },
-  { id: 's5', name: 'ZEN TEA Trảng Bom', address: 'Số 2469 Quốc Lộ 1A, Trảng Bom - Đồng Nai', phone: '0251.3822.425', isActive: true },
-  { id: 's6', name: 'ZEN TEA Long Thành', address: 'Số 251 - 253 Lê Duẩn, tổ 32, khu Cầu Xéo Long Thành - Đồng Nai', phone: '0251.3822.426', isActive: true },
-  { id: 's7', name: 'ZEN TEA Trảng Dài', address: 'Số 169 Nguyễn Ái Quốc, KP1 Biên Hòa - Đồng Nai', phone: '0251.3822.427', isActive: true },
-  { id: 's8', name: 'ZEN TEA Long Khánh', address: 'Số 428C đường Hồ Thị Hương, p. Xuân An Long Khánh - Đồng Nai', phone: '0251.3822.428', isActive: true },
-  { id: 's9', name: 'ZEN TEA Thích Quảng Đức', address: 'Số 254 đường Thích Quảng Đức, p. Chánh Nghĩa, Thủ Dầu Một - Bình Dương', phone: '0251.3822.429', isActive: true }
+  { id: 's1', name: 'Chiba Biên Hùng', address: 'Số 241 đường 30/4, p. Trung Dũng Biên Hoà - Đồng Nai', phone: '0251.3822.421', isActive: true },
+  { id: 's2', name: 'Chiba Ngô Quyền', address: 'Số 328 đường 30/4, p. Trung Dũng Biên Hoà - Đồng Nai', phone: '0251.3822.422', isActive: true },
+  { id: 's3', name: 'Chiba Quảng Trường', address: 'Số 384 đường Phạm Văn Thuận, p.Trung Dũng, Biên Hoà - Đồng Nai', phone: '0251.3822.423', isActive: true },
+  { id: 's4', name: 'Chiba Hố Nai', address: 'Số 63 đường Nguyễn Ái Quốc, p.Tân Biên Biên Hoà - Đồng Nai', phone: '0251.3822.424', isActive: true },
+  { id: 's5', name: 'Chiba Trảng Bom', address: 'Số 2469 Quốc Lộ 1A, Trảng Bom - Đồng Nai', phone: '0251.3822.425', isActive: true },
+  { id: 's6', name: 'Chiba Long Thành', address: 'Số 251 - 253 Lê Duẩn, tổ 32, khu Cầu Xéo Long Thành - Đồng Nai', phone: '0251.3822.426', isActive: true },
+  { id: 's7', name: 'Chiba Trảng Dài', address: 'Số 169 Nguyễn Ái Quốc, KP1 Biên Hòa - Đồng Nai', phone: '0251.3822.427', isActive: true },
+  { id: 's8', name: 'Chiba Long Khánh', address: 'Số 428C đường Hồ Thị Hương, p. Xuân An Long Khánh - Đồng Nai', phone: '0251.3822.428', isActive: true },
+  { id: 's9', name: 'Chiba Thích Quảng Đức', address: 'Số 254 đường Thích Quảng Đức, p. Chánh Nghĩa, Thủ Dầu Một - Bình Dương', phone: '0251.3822.429', isActive: true }
 ];
 
 export default function StoresPage() {

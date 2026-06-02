@@ -3,9 +3,9 @@ import './globals.css';
 import Providers from '@/lib/providers';
 
 export const metadata: Metadata = {
-  title: 'ZEN F&B - Trà & Cà Phê Nguyên Bản',
-  description: 'Đặt trà, sữa tươi đường đen và cà phê thốt nốt ngon nhất tại ZEN F&B. Trải nghiệm mượt mà, giao hàng tiện lợi.',
-  keywords: 'ZEN F&B, trà sữa thốt nốt, trà chanh mật ong, đặt trà sữa Biên Hòa',
+  title: 'Chiba - Tea, Coffee & Foods',
+  description: 'Đặt trà, cà phê và đồ ăn ngon nhất tại Chiba. Trải nghiệm mượt mà, giao hàng tiện lợi.',
+  keywords: 'Chiba, trà sữa Chiba, đặt cà phê Chiba, Chiba Tea Coffee Foods',
   viewport: {
     width: 'device-width',
     initialScale: 1,
