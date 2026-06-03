@@ -5,7 +5,7 @@ import { useCart } from '@/lib/context/CartContext';
 import { Product, ProductCategory } from '@/types';
 import { Search, Plus, ShoppingCart, Sparkles, X } from 'lucide-react';
 
-const MOCK_PRODUCTS: Product[] = [
+export const MOCK_PRODUCTS: Product[] = [
   // MÓN NƯỚC (Highlands Coffee & Bubble Tea Style)
   { id: 'p1', name: 'Trà Thanh Đào Highlands', price: 49000, category: 'MON_NUOC', isAvailable: true },
   { id: 'p2', name: 'Trà Thạch Sen Bùi Thơm', price: 49000, category: 'MON_NUOC', isAvailable: true },

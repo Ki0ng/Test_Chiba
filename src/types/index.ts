@@ -50,4 +50,22 @@ export interface Order {
   totalItems: number;
   status: 'PENDING' | 'CONFIRMED' | 'COMPLETED' | 'CANCELLED';
   createdAt: string;
+  pointsUsed?: number;
+  discountAmount?: number;
 }
+
+export type PointTransactionType = 'EARNED_ORDER' | 'REDEEMED_APP' | 'REDEEMED_STORE' | 'ADMIN_ADJUST';
+
+export interface PointTransaction {
+  id: string;
+  userId: string;
+  userEmail: string;
+  userName: string;
+  points: number; // Positive for earning, negative for spending/redemption
+  pointsBefore: number; // User points before transaction
+  pointsAfter: number; // User points after transaction
+  type: PointTransactionType;
+  description: string;
+  createdAt: string;
+}
+

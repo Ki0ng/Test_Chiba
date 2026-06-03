@@ -7,12 +7,21 @@ import Link from 'next/link';
 import { ArrowLeft, User, Phone, BadgeCheck, Star, Trash2, ShieldCheck, Check } from 'lucide-react';
 
 export default function ProfilePage() {
-  const { user, isAuthenticated, logout, updateProfileName, loading } = useAuth();
+  const { user, isAuthenticated, logout, updateProfileName, loading, getPointHistory } = useAuth();
   const router = useRouter();
 
   const [showModal, setShowModal] = useState(false);
   const [inputName, setInputName] = useState('');
   const [updating, setUpdating] = useState(false);
+  
+  const [history, setHistory] = useState<any[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+
+  useEffect(() => {
+    if (user && getPointHistory) {
+      setHistory(getPointHistory(user.id));
+    }
+  }, [user, getPointHistory]);
 
   useEffect(() => {
     if (!loading && !isAuthenticated) {
@@ -127,6 +136,49 @@ export default function ProfilePage() {
             </div>
             <Star className="w-5 h-5 text-accent/50" />
           </div>
+        </div>
+
+        {/* Lịch sử điểm tích lũy */}
+        <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-sm p-5 space-y-4">
+          <button
+            onClick={() => setShowHistory(!showHistory)}
+            className="w-full flex items-center justify-between font-bold text-sm text-foreground focus:outline-none"
+          >
+            <span className="flex items-center gap-2">
+              <Star className="w-5 h-5 text-accent stroke-[2.2]" />
+              <span>Lịch sử điểm Chiba</span>
+            </span>
+            <span className="text-xs text-primary font-bold hover:underline">
+              {showHistory ? 'Thu gọn ▲' : 'Xem chi tiết ▼'}
+            </span>
+          </button>
+          
+          {showHistory && (
+            <div className="pt-3 border-t border-dashed border-border/60 space-y-3 max-h-60 overflow-y-auto pr-1 animate-fade-in">
+              {history.length > 0 ? (
+                history.map((tx) => {
+                  const isPositive = tx.points >= 0;
+                  return (
+                    <div key={tx.id} className="flex justify-between items-start py-2.5 border-b border-border/40 last:border-b-0 gap-3">
+                      <div className="space-y-0.5 min-w-0">
+                        <p className="text-xs font-bold text-foreground truncate">{tx.description}</p>
+                        <p className="text-[9px] text-muted-foreground">
+                          Số dư: {tx.pointsBefore || 0} ➔ {tx.pointsAfter || 0} | {new Date(tx.createdAt).toLocaleString('vi-VN')}
+                        </p>
+                      </div>
+                      <span className={`text-xs font-black shrink-0 px-2 py-0.5 rounded ${
+                        isPositive ? 'bg-green-50 text-green-600' : 'bg-red-50 text-destructive'
+                      }`}>
+                        {isPositive ? '+' : ''}{tx.points}
+                      </span>
+                    </div>
+                  );
+                })
+              ) : (
+                <p className="text-xs text-muted-foreground text-center py-4">Bạn chưa thực hiện giao dịch tích điểm nào.</p>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Admin Section if Admin role */}

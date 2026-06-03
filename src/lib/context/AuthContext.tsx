@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { User } from '@/types';
+import { User, PointTransaction, PointTransactionType } from '@/types';
 
 interface AuthContextType {
   user: User | null;
@@ -19,6 +19,9 @@ interface AuthContextType {
   deleteAccount: (action: 'SUSPEND' | 'DELETE') => Promise<void>;
   inviteStaff: (email: string) => Promise<void>;
   revokeInvitation: (email: string) => Promise<void>;
+  getAllUsers: () => User[];
+  updateUserPoints: (userId: string, pointsChange: number, type: PointTransactionType, description: string) => Promise<void>;
+  getPointHistory: (userId?: string) => PointTransaction[];
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -68,6 +71,7 @@ const DEFAULT_USERS: Record<string, any> = {
 };
 
 const STAFF_INVITES_KEY = 'zen_fb_invited_staff';
+const POINT_HISTORY_KEY = 'zen_fb_point_history';
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -328,6 +332,70 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
+  const getAllUsers = (): User[] => {
+    const users = getMockUsers();
+    return Object.values(users).map(({ password, ...safeUser }: any) => safeUser as User);
+  };
+
+  const getPointHistory = (userId?: string): PointTransaction[] => {
+    if (typeof window === 'undefined') return [];
+    const stored = localStorage.getItem(POINT_HISTORY_KEY);
+    const history: PointTransaction[] = stored ? JSON.parse(stored) : [];
+    if (userId) {
+      return history.filter(tx => tx.userId === userId);
+    }
+    return history;
+  };
+
+  const updateUserPoints = async (
+    userId: string,
+    pointsChange: number,
+    type: PointTransactionType,
+    description: string
+  ) => {
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    const users = getMockUsers();
+    
+    // Find user by ID
+    const userEmailKey = Object.keys(users).find(key => users[key].id === userId);
+    if (!userEmailKey) {
+      throw new Error('Không tìm thấy người dùng này');
+    }
+
+    const targetUser = users[userEmailKey];
+    const oldPoints = targetUser.zenPoints || 0;
+    const newPoints = Math.max(0, oldPoints + pointsChange);
+    targetUser.zenPoints = newPoints;
+    
+    saveMockUsers(users);
+
+    const newTransaction: PointTransaction = {
+      id: `TX_${Date.now()}_${Math.floor(1000 + Math.random() * 9000)}`,
+      userId,
+      userEmail: targetUser.email,
+      userName: targetUser.fullName,
+      points: pointsChange,
+      pointsBefore: oldPoints,
+      pointsAfter: newPoints,
+      type,
+      description,
+      createdAt: new Date().toISOString()
+    };
+
+    if (typeof window !== 'undefined') {
+      const storedHistory = localStorage.getItem(POINT_HISTORY_KEY);
+      const history = storedHistory ? JSON.parse(storedHistory) : [];
+      history.unshift(newTransaction);
+      localStorage.setItem(POINT_HISTORY_KEY, JSON.stringify(history));
+    }
+
+    if (user && user.id === userId) {
+      const updatedUser = { ...user, zenPoints: newPoints };
+      localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(updatedUser));
+      setUser(updatedUser);
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -346,6 +414,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         deleteAccount,
         inviteStaff,
         revokeInvitation,
+        getAllUsers,
+        updateUserPoints,
+        getPointHistory,
       }}
     >
       {children}
