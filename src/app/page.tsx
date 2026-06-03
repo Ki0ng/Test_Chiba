@@ -61,7 +61,13 @@ export default function LoginPage() {
       <div className="w-full max-w-sm mx-auto space-y-8 animate-fade-in">
         {/* Chiba Brand Identity */}
         <div className="text-center">
-          <div className="text-6xl mb-4 animate-bounce duration-1000">☕</div>
+          <div className="flex justify-center mb-4">
+            <img
+              src="/logo.png"
+              alt="Chiba Logo"
+              className="w-24 h-24 rounded-full border border-primary/10 shadow-premium object-cover bg-white p-1 animate-fade-in"
+            />
+          </div>
           <h1 className="text-4xl font-extrabold text-primary tracking-tight">Chiba</h1>
           <p className="text-muted-foreground mt-2 text-sm font-medium tracking-wide">Tea • Coffee • Foods</p>
         </div>

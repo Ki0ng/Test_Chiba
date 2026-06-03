@@ -28,8 +28,10 @@ export default function Header({ user }: HeaderProps) {
       <div className="max-w-2xl mx-auto px-5 py-4">
         {/* Top Navbar Row */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="text-2xl">☕</div>
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center p-0.5 shadow-sm">
+              <img src="/logo.png" alt="Chiba Logo" className="w-full h-full rounded-full object-cover" />
+            </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight">Chiba</h1>
               <p className="text-[10px] text-white/70 tracking-widest uppercase">Tea, Coffee & Foods</p>

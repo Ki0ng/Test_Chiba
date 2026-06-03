@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Providers from '@/lib/providers';
 
+
 export const metadata: Metadata = {
   title: 'Chiba - Tea, Coffee & Foods',
   description: 'Đặt trà, cà phê và đồ ăn ngon nhất tại Chiba. Trải nghiệm mượt mà, giao hàng tiện lợi.',
