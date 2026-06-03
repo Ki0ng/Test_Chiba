@@ -1,21 +1,12 @@
-<<<<<<< HEAD
 # ☕ Chiba — Tea, Coffee & Foods
 
 Chào mừng bạn đến với **Chiba**, một nền tảng ứng dụng đặt trà, cà phê và đồ ăn với giao diện cao cấp, hiện đại và trải nghiệm người dùng tối ưu. Dự án được phát triển bằng **Next.js 14** kết hợp với hệ thống thiết kế độc bản sử dụng **Tailwind CSS**.
-=======
-# ☕ ZEN F&B — Trà & Cà Phê Nguyên Bản
-
-Chào mừng bạn đến với **ZEN F&B**, một nền tảng ứng dụng đặt trà, sữa tươi và cà phê thốt nốt với giao diện cao cấp, hiện đại và trải nghiệm người dùng tối ưu. Dự án được phát triển bằng **Next.js 14** kết hợp với hệ thống thiết kế Zen F&B độc bản sử dụng **Tailwind CSS**.
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 
 ---
 
 ## 🎨 Điểm Nổi Bật Về Giao Diện & Trải Nghiệm (UX/UI)
-<<<<<<< HEAD
 * **Chiba Design System**: Tone màu chủ đạo được phối hài hòa giữa sắc Xanh Thiền định cổ điển (Deep Zen Green `#1E4620`) và sắc Cam Ấm cúng từ logo Chiba (Cafe Warm Orange `#D87D4A`).
-=======
 * **Zen Design System**: Tone màu chủ đạo được phối hài hòa giữa sắc Xanh Thiền định cổ điển (Deep Zen Green `#1E4620`) và sắc Cam Ấm cúng từ những hạt cà phê rang xay (Cafe Warm Orange `#D87D4A`).
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 * **Trải nghiệm Mockup Di động cao cấp**: Toàn bộ ứng dụng được bọc trong khung mô phỏng di động hiện đại mang lại cảm giác tiện lợi như đang sử dụng ứng dụng di động thực tế.
 * **Tương tác chuyển động vi mô (Micro-interactions)**: Các nút bấm, ô nhập liệu và các hộp thông tin đều sở hữu các chuyển động mềm mại, đổ bóng cao cấp (`shadow-premium`, `shadow-floating`) kích thích thị giác của khách hàng.
 
@@ -83,7 +74,6 @@ npm run start
 
 | Vai Trò (Role) | Email Đăng Nhập | Mật Khẩu | Quyền Hạn |
 | :--- | :--- | :--- | :--- |
-<<<<<<< HEAD
 | **Quản Trị Viên (Admin)** | `admin@chiba.com` | `123456` | Xem doanh thu hệ thống, mời/thu hồi lời mời cho Nhân viên mới. |
 | **Nhân Viên (Staff)** | `staff@chiba.com` | `123456` | Tiếp nhận, xác nhận đơn hàng, hoàn thành pha chế, cập nhật kho hàng. |
 | **Khách Hàng (Customer)** | `user@chiba.com` | `123456` | Xem thực đơn, thêm topping vào giỏ hàng, đặt hàng và tích lũy điểm Chiba. |
@@ -91,7 +81,6 @@ npm run start
 | **Quản Trị Viên (Admin)** | `admin@zenfb.com` | `123456` | Xem doanh thu hệ thống, mời/thu hồi lời mời cho Nhân viên mới. |
 | **Nhân Viên (Staff)** | `staff@zenfb.com` | `123456` | Tiếp nhận, xác nhận đơn hàng, hoàn thành pha chế, cập nhật kho hàng. |
 | **Khách Hàng (Customer)** | `user@zenfb.com` | `123456` | Xem thực đơn, thêm topping vào giỏ hàng, đặt hàng và tích lũy điểm ZEN. |
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 
 ---
 
@@ -101,28 +90,15 @@ ChibaApp/
 ├── .vscode/               # Cấu hình không gian làm việc VS Code (ẩn lỗi linter Tailwind)
 ├── src/
 │   ├── app/               # Next.js App Router Pages (Layout, Home, Cart, Admin, Profile...)
-<<<<<<< HEAD
-│   │   ├── globals.css    # File cấu hình CSS Chiba Theme & tối ưu scrollbar/animations
-=======
 │   │   ├── globals.css    # File cấu hình CSS Zen Theme & tối ưu scrollbar/animations
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 │   │   └── layout.tsx     # Cấu hình Layout tổng và SEO Meta tags
 │   ├── components/        # Thư mục chứa các Component dùng chung (Header, ProductList...)
 │   ├── lib/
 │   │   ├── context/       # AuthContext (quản lý session/roles) và CartContext (quản lý giỏ hàng)
 │   │   └── providers.tsx  # Providers bọc quanh ứng dụng Next.js
 │   └── types/             # Kiểu dữ liệu TypeScript (User, Order, CartItem, Product...)
-<<<<<<< HEAD
 ├── tailwind.config.js     # File cấu hình bảng màu Chiba Theme cho Tailwind v3
-=======
-├── tailwind.config.js     # File cấu hình bảng màu Zen Theme cho Tailwind v3
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 ├── postcss.config.mjs     # File cấu hình biên dịch CSS
 └── package.json           # Danh sách thư viện và scripts chạy dự án
 ```
-
-<<<<<<< HEAD
 Chúc bạn có những trải nghiệm tuyệt vời cùng **Chiba**! ☕🍵
-=======
-Chúc bạn có những trải nghiệm tuyệt vời cùng **ZEN F&B**! ☕🍵
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
