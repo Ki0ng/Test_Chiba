@@ -1,13 +1,12 @@
 # ☕ Chiba — Tea, Coffee & Foods
 
 Chào mừng bạn đến với **Chiba**, một nền tảng ứng dụng đặt trà, cà phê và đồ ăn với giao diện cao cấp, hiện đại và trải nghiệm người dùng tối ưu. Dự án được phát triển bằng **Next.js 14** kết hợp với hệ thống thiết kế độc bản sử dụng **Tailwind CSS**.
-=======
+
+---
 
 ## 🎨 Điểm Nổi Bật Về Giao Diện & Trải Nghiệm (UX/UI)
 * **Chiba Design System**: Tone màu chủ đạo được phối hài hòa giữa sắc Xanh Thiền định cổ điển (Deep Zen Green `#1E4620`) và sắc Cam Ấm cúng từ logo Chiba (Cafe Warm Orange `#D87D4A`).
-=======
 * **Zen Design System**: Tone màu chủ đạo được phối hài hòa giữa sắc Xanh Thiền định cổ điển (Deep Zen Green `#1E4620`) và sắc Cam Ấm cúng từ những hạt cà phê rang xay (Cafe Warm Orange `#D87D4A`).
->>>>>>> 830185a0d427a1d6f732d73e31daaba7eea71379
 * **Trải nghiệm Mockup Di động cao cấp**: Toàn bộ ứng dụng được bọc trong khung mô phỏng di động hiện đại mang lại cảm giác tiện lợi như đang sử dụng ứng dụng di động thực tế.
 * **Tương tác chuyển động vi mô (Micro-interactions)**: Các nút bấm, ô nhập liệu và các hộp thông tin đều sở hữu các chuyển động mềm mại, đổ bóng cao cấp (`shadow-premium`, `shadow-floating`) kích thích thị giác của khách hàng.
 
